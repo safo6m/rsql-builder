@@ -21,10 +21,7 @@ function escapeValue(value) {
         return value;
     }
     let val;
-    if (value === true || value === false) {
-        val = `${value}`;
-    }
-    else if (typeof value !== 'string') {
+    if (typeof value !== 'string') {
         val = value.toString();
     }
     else {
