@@ -5,6 +5,7 @@ import escapeValue from './escape-value';
  */
 export enum Operators {
   EQUAL = '==',
+  EXISTS = '=exists=',
   NOT_EQUAL = '!=',
   LESS_THAN = '<',
   LESS_OR_EQUAL = '<=',
