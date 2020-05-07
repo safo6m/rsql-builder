@@ -10,6 +10,7 @@ const escape_value_1 = __importDefault(require("./escape-value"));
 var Operators;
 (function (Operators) {
     Operators["EQUAL"] = "==";
+    Operators["EXISTS"] = "=exists=";
     Operators["NOT_EQUAL"] = "!=";
     Operators["LESS_THAN"] = "<";
     Operators["LESS_OR_EQUAL"] = "<=";

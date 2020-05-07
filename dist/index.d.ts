@@ -10,3 +10,4 @@ export { default as ne } from './ne';
 export { default as or } from './or';
 export { default as outList } from './out-list';
 export { default as like } from './like';
+export { default as exists } from './exists';

@@ -24,4 +24,6 @@ var out_list_1 = require("./out-list");
 exports.outList = out_list_1.default;
 var like_1 = require("./like");
 exports.like = like_1.default;
+var exists_1 = require("./exists");
+exports.exists = exists_1.default;
 //# sourceMappingURL=index.js.map
