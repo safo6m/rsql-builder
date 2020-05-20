@@ -14,6 +14,6 @@ export declare enum Operators {
 export declare class Operation {
   private _args;
   private _operator;
-  constructor(args: any, operator?: Operators);
+  constructor(args: any, operator?: Operators | string);
   toString(): string;
 }
