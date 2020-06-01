@@ -1,9 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const escape_value_1 = __importDefault(require("./escape-value"));
+const escape_value_1 = __importStar(require("./escape-value"));
 /**
  * Operators signs
  */
@@ -20,12 +24,19 @@ var Operators;
 })(Operators = exports.Operators || (exports.Operators = {}));
 class Operation {
     constructor(args, operator = Operators.EQUAL) {
-        this._args = args;
-        this._operator = operator;
+        this.args = args;
+        this.operator = operator;
     }
     toString() {
-        return `${this._operator}${escape_value_1.default(this._args)}`;
+        return `${this.operator}${escape_value_1.default(this.args)}`;
     }
 }
 exports.Operation = Operation;
+class ListOperation extends Operation {
+    toString() {
+        const escapedValue = new escape_value_1.EscapedValue(`(${this.args.map(escape_value_1.default)})`);
+        return `${this.operator}${escapedValue}`;
+    }
+}
+exports.ListOperation = ListOperation;
 //# sourceMappingURL=operation.js.map

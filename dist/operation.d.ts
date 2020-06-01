@@ -12,8 +12,11 @@ export declare enum Operators {
     OUT = '=out='
 }
 export declare class Operation {
-  private _args;
-  private _operator;
+  protected args: any;
+  protected operator: Operators | string;
   constructor(args: any, operator?: Operators | string);
+  toString(): string;
+}
+export declare class ListOperation extends Operation {
   toString(): string;
 }
