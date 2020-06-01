@@ -25,5 +25,6 @@ exports.or = or_1.default;
 var out_list_1 = require("./out-list");
 exports.outList = out_list_1.default;
 var operation_1 = require("./operation");
+exports.ListOperation = operation_1.ListOperation;
 exports.Operation = operation_1.Operation;
 //# sourceMappingURL=index.js.map
